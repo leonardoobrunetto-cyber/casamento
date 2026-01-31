@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casamento Mariana & Leonardo</title>
     
+    <!-- Meta Tags para Redes Sociais (GitHub/WhatsApp) -->
+    <meta property="og:title" content="Casamento Mariana & Leonardo">
+    <meta property="og:description" content="Convidamos você para celebrar conosco este momento especial em 11 de Abril de 2026.">
+    <meta property="og:type" content="website">
+    
     <!-- Google Fonts: Pinyon Script (Títulos) e EB Garamond (Textos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
