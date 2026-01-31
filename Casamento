@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casamento Mariana & Leonardo</title>
+    
+    <!-- Google Fonts: Pinyon Script (Títulos) e EB Garamond (Textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#053d57', 
+                        'brand-white': '#FFFFFF',
+                        'brand-gold': '#C5A059', 
+                        'bg-soft': '#FBFBFA',
+                    },
+                    fontFamily: {
+                        'script': ['"Pinyon Script"', 'cursive'],
+                        'serif': ['"EB Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #FFFFFF;
+            color: #053d57;
+            font-family: 'EB Garamond', serif;
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(5, 61, 87, 0.4), rgba(5, 61, 87, 0.7));
+        }
+        .section-title {
+            font-family: 'Pinyon Script', cursive;
+        }
+        /* Caracteres & reduzidos, sem negrito e em Times New Roman */
+        .amp {
+            font-family: "Times New Roman", Times, serif !important;
+            font-style: normal;
+            font-weight: 400 !important;
+            font-size: 0.5em; 
+            vertical-align: middle;
+            display: inline-block;
+            margin: 0 0.1em;
+        }
+        .btn-primary {
+            background-color: #053d57;
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #08567a;
+            transform: translateY(-2px);
+        }
+        .border-elegant {
+            border: 1px solid rgba(5, 61, 87, 0.2);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .img-contain {
+            object-fit: contain;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-white/90 backdrop-blur-md border-b border-brand-blue/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0">
+                    <span class="section-title text-4xl text-brand-blue">M <span class="amp">&</span> L</span>
+                </div>
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="#inicio" class="text-brand-blue hover:text-brand-gold transition-colors text-sm uppercase tracking-[0.2em] font-medium">Início</a>
+                    <a href="#cerimonia" class="text-brand-blue hover:text-brand-gold transition-colors text-sm uppercase tracking-[0.2em] font-medium">O Evento</a>
+                    <a href="#dresscode" class="text-brand-blue hover:text-brand-gold transition-colors text-sm uppercase tracking-[0.2em] font-medium">Dress Code</a>
+                    <a href="#presentes" class="text-brand-blue hover:text-brand-gold transition-colors text-sm uppercase tracking-[0.2em] font-medium">Presentes</a>
+                    <a href="#rsvp" class="bg-brand-blue text-white px-8 py-2 hover:bg-brand-blue/90 transition-all text-xs uppercase tracking-[0.2em]">Confirmar PRESENÇA</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://lh3.googleusercontent.com/u/0/d/1-2_cWnDtktgedzaH6NnnllH9yZQjY2_l=w1600-h900-p-k-no-iv1" alt="Noivos Mariana e Leonardo" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop'">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl">
+            <p class="uppercase tracking-[0.5em] text-sm mb-6 opacity-90 font-light">Convidam para o seu casamento</p>
+            <h1 class="section-title text-7xl md:text-9xl mb-8 leading-tight">Mariana <span class="amp">&</span> Leonardo</h1>
+            <div class="flex items-center justify-center space-x-4 mb-8">
+                <div class="h-px w-12 bg-white/50"></div>
+                <span class="text-2xl font-light italic">11 de Abril de 2026</span>
+                <div class="h-px w-12 bg-white/50"></div>
+            </div>
+            <p class="text-lg uppercase tracking-[0.3em] font-light">Porto Alegre, RS</p>
+            <div class="mt-12">
+                <a href="#cerimonia" class="inline-block border border-white px-10 py-3 text-xs uppercase tracking-[0.3em] hover:bg-white hover:text-brand-blue transition-all duration-300">Descobrir Detalhes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Evento -->
+    <section id="cerimonia" class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title text-6xl text-brand-blue mb-4">A Celebração</h2>
+                <div class="w-20 h-px bg-brand-gold mx-auto mb-6"></div>
+                <p class="text-xl italic text-gray-500">Do altar à celebração à beira do Guaíba</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-20">
+                <div class="reveal group">
+                    <div class="relative mb-10 overflow-hidden shadow-2xl bg-gray-100">
+                        <img src="https://lh3.googleusercontent.com/u/0/d/1KPc-KiWncswUZXbY3HzFvkUzEqyDCRU8=w1000" alt="Igreja Cerimônia" class="w-full h-96 object-cover transition-transform duration-1000 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1548625361-16a735c07b4c?q=80&w=1000'">
+                        <div class="absolute inset-0 border-[15px] border-white/20"></div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-serif text-3xl text-brand-blue mb-4 uppercase tracking-widest">Cerimônia Religiosa</h3>
+                        <p class="text-brand-gold font-bold text-xl mb-6 tracking-widest">10:00 Horas</p>
+                        <p class="font-serif text-2xl mb-2 italic">Paróquia Nossa Senhora da Assunção</p>
+                        <p class="text-gray-500 font-light text-sm mb-6 uppercase tracking-widest">Praça José Assunção, 1 • Vila Assunção</p>
+                        <a href="https://maps.google.com/?q=Paróquia+Nossa+Senhora+da+Assunção+Porto+Alegre" target="_blank" class="text-brand-blue border-b border-brand-blue/30 pb-1 text-xs uppercase tracking-[0.2em] hover:text-brand-gold hover:border-brand-gold transition-all">Localização</a>
+                    </div>
+                </div>
+
+                <div class="reveal group" style="transition-delay: 0.2s;">
+                    <div class="relative mb-10 overflow-hidden shadow-2xl bg-gray-100">
+                        <img src="https://lh3.googleusercontent.com/u/0/d/1aH1KMZqUXEqQhRUmB3kW-RCaaGkn2I-E=w1000" alt="Recepção Evento" class="w-full h-96 object-cover transition-transform duration-1000 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1533093048998-2b0230634863?q=80&w=1000'">
+                        <div class="absolute inset-0 border-[15px] border-white/20"></div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-serif text-3xl text-brand-blue mb-4 uppercase tracking-widest">A Recepção</h3>
+                        <p class="text-brand-gold font-bold text-xl mb-6 tracking-widest">Após a Cerimônia</p>
+                        <p class="font-serif text-2xl mb-2 italic">Eat Cais Embarcadero</p>
+                        <p class="text-gray-500 font-light text-sm mb-6 uppercase tracking-widest">Av. Mauá, 1050 • Centro Histórico</p>
+                        <a href="https://maps.google.com/?q=Cais+Embarcadero+Porto+Alegre" target="_blank" class="text-brand-blue border-b border-brand-blue/30 pb-1 text-xs uppercase tracking-[0.2em] hover:text-brand-gold hover:border-brand-gold transition-all">Localização</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code -->
+    <section id="dresscode" class="py-32 bg-bg-soft">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-6xl text-brand-blue mb-4">Traje Sugerido</h2>
+                <div class="w-20 h-px bg-brand-gold mx-auto"></div>
+            </div>
+            
+            <div class="bg-white p-12 md:p-20 shadow-xl border-elegant text-center mb-16 relative">
+                <div class="font-serif text-xl text-gray-700 leading-relaxed space-y-4">
+                    <p>Queremos que todos se sintam à vontade para celebrar esse dia tão especial conosco. Para a cerimônia e a recepção, sugerimos looks que unam conforto, elegância e o seu estilo pessoal.</p>
+                    <p>Escolham trajes que conversem com o clima da celebração e com o horário do evento, lembrando que o mais importante é que você se sinta bem para viver esse momento ao nosso lado.</p>
+                    <p>Aos homens, pedimos que evitem o uso de terno.</p>
+                    <p>Às mulheres, pedimos que evitem o branco e tons muito claros semelhantes a ele.</p>
+                    <p class="pt-4 font-bold text-brand-blue">Estamos ansiosos para celebrar juntos!</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal bg-white border-elegant overflow-hidden flex flex-col">
+                    <div class="h-[500px] w-full bg-gray-50">
+                        <img src="https://lh3.googleusercontent.com/u/0/d/1PQnXRVUuOp4KA-ye4XckRoQCW77WRZ6E=w800" alt="Traje Masculino" class="w-full h-full img-contain border-b border-elegant">
+                    </div>
+                    <div class="p-8 text-center">
+                        <h4 class="font-serif text-3xl text-brand-blue uppercase tracking-widest">Para Eles</h4>
+                    </div>
+                </div>
+
+                <div class="reveal bg-white border-elegant overflow-hidden flex flex-col" style="transition-delay: 0.1s;">
+                    <div class="h-[500px] w-full bg-gray-50">
+                        <img src="https://lh3.googleusercontent.com/u/0/d/1GQV3Ajh4bnwrwdpimWp0rtt06sY1lsv3=w800" alt="Traje Feminino" class="w-full h-full img-contain border-b border-elegant">
+                    </div>
+                    <div class="p-8 text-center">
+                        <h4 class="font-serif text-3xl text-brand-blue uppercase tracking-widest">Para Elas</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentes -->
+    <section id="presentes" class="py-32 bg-brand-blue text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="section-title text-6xl mb-6">Lista de Presentes</h2>
+            <p class="font-serif text-xl italic mb-16 opacity-80 max-w-2xl mx-auto">
+                Optamos por uma lista de cotas simbólicas para nossa Lua de Mel em Punta Cana. O maior presente é a sua companhia.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Drinks Tropicais -->
+                <div class="reveal bg-white p-6 rounded-sm text-brand-blue">
+                    <div class="h-48 overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1645231286309-2beccdfae91c?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Drinks Tropicais"></div>
+                    <h5 class="font-serif text-2xl mb-2">Drinks Tropicais</h5>
+                    <p class="text-sm text-gray-500 mb-6 font-light">Um brinde ao amor no Caribe.</p>
+                    <div class="text-3xl font-serif text-brand-gold mb-6 italic">R$ 100</div>
+                    <a href="https://payment-link-v3.stone.com.br/pl_oQ7z354G8mM1BYb3tMuMXvELxw6lRrDA" target="_blank" class="btn-primary block text-center w-full py-3 text-xs uppercase tracking-widest font-bold">Presentear</a>
+                </div>
+                <!-- Jantar Romântico -->
+                <div class="reveal bg-white p-6 rounded-sm text-brand-blue" style="transition-delay: 0.1s;">
+                    <div class="h-48 overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1671691302268-e316f81c7b3e?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Jantar Romântico"></div>
+                    <h5 class="font-serif text-2xl mb-2">Jantar Romântico</h5>
+                    <p class="text-sm text-gray-500 mb-6 font-light">Uma noite especial à luz de velas.</p>
+                    <div class="text-3xl font-serif text-brand-gold mb-6 italic">R$ 250</div>
+                    <a href="https://payment-link-v3.stone.com.br/pl_O2Ly6BlR0Qw5O6mI3zsGrxXzMpkVnDjZ" target="_blank" class="btn-primary block text-center w-full py-3 text-xs uppercase tracking-widest font-bold">Presentear</a>
+                </div>
+                <!-- Momento de Spa -->
+                <div class="reveal bg-white p-6 rounded-sm text-brand-blue" style="transition-delay: 0.2s;">
+                    <div class="h-48 overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Momento de Spa"></div>
+                    <h5 class="font-serif text-2xl mb-2">Momento de Spa</h5>
+                    <p class="text-sm text-gray-500 mb-6 font-light">Relaxamento para os noivos.</p>
+                    <div class="text-3xl font-serif text-brand-gold mb-6 italic">R$ 500</div>
+                    <a href="https://payment-link-v3.stone.com.br/pl_JONbL9K7rBMdOkKSKOUMgd8lAkgwWaVo" target="_blank" class="btn-primary block text-center w-full py-3 text-xs uppercase tracking-widest font-bold">Presentear</a>
+                </div>
+                <!-- Tour de Barco -->
+                <div class="reveal bg-white p-6 rounded-sm text-brand-blue" style="transition-delay: 0.3s;">
+                    <div class="h-48 overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1523496922380-91d5afba98a3?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Tour de Barco"></div>
+                    <h5 class="font-serif text-2xl mb-2">Tour de Barco</h5>
+                    <p class="text-sm text-gray-500 mb-6 font-light">Exploração das águas cristalinas.</p>
+                    <div class="text-3xl font-serif text-brand-gold mb-6 italic">R$ 800</div>
+                    <a href="https://payment-link-v3.stone.com.br/pl_Wyq0LjmBAGx9dwbSM6fDwV6Rd2M7boEP" target="_blank" class="btn-primary block text-center w-full py-3 text-xs uppercase tracking-widest font-bold">Presentear</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pôr do Sol no Mar -->
+                <div class="reveal bg-white p-6 rounded-sm text-brand-blue">
+                    <div class="h-48 overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1724758333440-a0f850041c4c?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Pôr do Sol no Mar"></div>
+                    <h5 class="font-serif text-2xl mb-2">Pôr do Sol no Mar</h5>
+                    <p class="text-sm text-gray-500 mb-6 font-light">Passeio exclusivo no entardecer.</p>
+                    <div class="text-3xl font-serif text-brand-gold mb-6 italic">R$ 350</div>
+                    <a href="https://payment-link-v3.stone.com.br/pl_6Ayvp50dZBDV7DLcE5t97LMkmYNlWjob" target="_blank" class="btn-primary block text-center w-full py-3 text-xs uppercase tracking-widest font-bold">Presentear</a>
+                </div>
+                <!-- Aventura Off-Road -->
+                <div class="reveal bg-white p-6 rounded-sm text-brand-blue" style="transition-delay: 0.1s;">
+                    <div class="h-48 overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1553966012-dd33086ea262?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Aventura Off-Road"></div>
+                    <h5 class="font-serif text-2xl mb-2">Aventura Off-Road</h5>
+                    <p class="text-sm text-gray-500 mb-6 font-light">Exploração da ilha em buggy.</p>
+                    <div class="text-3xl font-serif text-brand-gold mb-6 italic">R$ 600</div>
+                    <a href="https://payment-link-v3.stone.com.br/pl_E8lomBzxQdYDKoxCacnDyvLRWG9Jn0kw" target="_blank" class="btn-primary block text-center w-full py-3 text-xs uppercase tracking-widest font-bold">Presentear</a>
+                </div>
+                <!-- Mergulho com Peixes -->
+                <div class="reveal bg-white p-6 rounded-sm text-brand-blue" style="transition-delay: 0.2s;">
+                    <div class="h-48 overflow-hidden mb-6"><img src="https://plus.unsplash.com/premium_photo-1661265851801-e523847e3932?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Mergulho com Peixes"></div>
+                    <h5 class="font-serif text-2xl mb-2">Mergulho com Peixes</h5>
+                    <p class="text-sm text-gray-500 mb-6 font-light">Snorkeling nas piscinas naturais.</p>
+                    <div class="text-3xl font-serif text-brand-gold mb-6 italic">R$ 450</div>
+                    <a href="https://payment-link-v3.stone.com.br/pl_5knOVWx42o3D2lyUrZcvGXl0QK9y6Eqm" target="_blank" class="btn-primary block text-center w-full py-3 text-xs uppercase tracking-widest font-bold">Presentear</a>
+                </div>
+                <!-- Upgrade de Suíte -->
+                <div class="reveal bg-white p-6 rounded-sm text-brand-blue" style="transition-delay: 0.3s;">
+                    <div class="h-48 overflow-hidden mb-6"><img src="https://images.unsplash.com/photo-1758448755969-8791367cf5c5?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover" alt="Upgrade de Suíte"></div>
+                    <h5 class="font-serif text-2xl mb-2">Upgrade de Suíte</h5>
+                    <p class="text-sm text-gray-500 mb-6 font-light">Mimo extra na hospedagem.</p>
+                    <div class="text-3xl font-serif text-brand-gold mb-6 italic">R$ 1.200</div>
+                    <a href="https://payment-link-v3.stone.com.br/pl_ND3vgKo1EBXOzJGHqImmA47906daxQ5P" target="_blank" class="btn-primary block text-center w-full py-3 text-xs uppercase tracking-widest font-bold">Presentear</a>
+                </div>
+            </div>
+            
+            <div class="mt-20 h-8"></div>
+        </div>
+    </section>
+
+    <!-- Presença -->
+    <section id="rsvp" class="py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="border-elegant p-16 md:p-24 relative bg-bg-soft shadow-sm">
+                <div class="absolute inset-0 border-[20px] border-white pointer-events-none"></div>
+                <h2 class="section-title text-7xl text-brand-blue mb-8">Confirmar Presença</h2>
+                <p class="font-serif text-2xl italic text-gray-600 mb-10">Sua presença completará a nossa felicidade.</p>
+                <p class="text-sm uppercase tracking-[0.3em] text-brand-gold font-bold mb-4">Por favor, responda até</p>
+                <div class="text-4xl font-serif text-brand-blue mb-12 italic">10 de Março de 2026</div>
+                
+                <!-- Link de Confirmação atualizado -->
+                <a href="https://forms.gle/gD3t8n8vrZeoDwud9" target="_blank" class="btn-primary inline-block px-12 py-5 text-sm uppercase tracking-[0.3em] font-bold shadow-2xl">Confirmar agora</a>
+                
+                <div class="mt-16">
+                    <p class="text-xs uppercase tracking-widest text-gray-400">Dúvidas? <span class="amp">&</span> <span class="text-gray-400">ola@grandesite.com.br</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="py-20 bg-white text-center border-t border-gray-100">
+        <h2 class="section-title text-5xl text-brand-blue mb-4">Mariana <span class="amp">&</span> Leonardo</h2>
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-400">11 de Abril de 2026 • Porto Alegre</p>
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('py-0', 'shadow-lg');
+            } else {
+                nav.classList.remove('py-0', 'shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
